@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time Display</title>
+    <script>
+        function displayCurrentTime() {
+            var currentTime = new Date();
+            document.getElementById("current-time").innerHTML = "Current Time: " + currentTime.toLocaleTimeString('en-US',
+    {hour12:true,hour:'numeric',minute:'numeric',second:'numeric'}
+  );
+            document.getElementById("current-times").innerHTML = "Current Time: " + currentTime.toLocaleTimeString('en-US',
+            {hour12:true,hour:'numeric',minute:'numeric',second:'numeric'}
+  );
+
+        }
+        setInterval(displayCurrentTime, 1000);
+    </script>
+</head>
+<body>
+   <h1>virtual dom explanation</h1>
+    <h3> display CurrentTime</h3>
+    <div id="current-time"></div>
+    <p id="current-times"></p>
+</body>
+</html>
